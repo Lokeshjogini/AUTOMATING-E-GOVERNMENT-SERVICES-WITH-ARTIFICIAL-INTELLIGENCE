@@ -1,0 +1,31 @@
+from django.urls import path
+
+from . import views
+
+urlpatterns = [path("index.html", views.index, name="index"),
+               path("AdminLogin.html", views.AdminLogin, name="AdminLogin"),	      
+               path("AdminLoginAction", views.AdminLoginAction, name="AdminLoginAction"),
+	       path("ViewApproval", views.ViewApproval, name="ViewApproval"),
+               path("HospitalLoginAction", views.HospitalLoginAction, name="HospitalLoginAction"),
+               path("HospitalLogin.html", views.HospitalLogin, name="HospitalLogin"),
+               path("RevenueLogin.html", views.RevenueLogin, name="RevenueLogin"),	      
+               path("RevenueLoginAction", views.RevenueLoginAction, name="RevenueLoginAction"),
+	       path("UserLogin.html", views.UserLogin, name="UserLogin"),	      
+               path("UserLoginAction", views.UserLoginAction, name="UserLoginAction"),
+	       path("Signup.html", views.Signup, name="Signup"),	      
+               path("SignupAction", views.SignupAction, name="SignupAction"),
+	       path("ApplyCertificate.html", views.ApplyCertificate, name="ApplyCertificate"),	      
+               path("ApplyCertificateAction", views.ApplyCertificateAction, name="ApplyCertificateAction"),
+	       path("ViewStatus", views.ViewStatus, name="ViewStatus"),
+	       path("ViewUpcomingActivity", views.ViewUpcomingActivity, name="ViewUpcomingActivity"),
+	       path("ViewRevenueCertificateRequest", views.ViewRevenueCertificateRequest, name="ViewRevenueCertificateRequest"),
+	       path("ViewCertificateRequest", views.ViewCertificateRequest, name="ViewCertificateRequest"),
+	       path("AddActivities.html", views.AddActivities, name="AddActivities"),	      
+               path("AddActivitiesAction", views.AddActivitiesAction, name="AddActivitiesAction"),
+	       path("OTPAction", views.OTPAction, name="OTPAction"),
+	       path("DownloadCertificate", views.DownloadCertificate, name="DownloadCertificate"),
+	       path("RevenueAccept", views.RevenueAccept, name="RevenueAccept"),
+	       path("HospitalAccept", views.HospitalAccept, name="HospitalAccept"),
+	       path("UploadCertificate", views.UploadCertificate, name="UploadCertificate"),	      
+               path("UploadCertificateAction", views.UploadCertificateAction, name="UploadCertificateAction"),
+]

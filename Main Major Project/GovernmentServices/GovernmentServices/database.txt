@@ -1,0 +1,25 @@
+create database government;
+use government;
+
+create table signup(person_name varchar(40),
+father_name varchar(40),
+birth_date varchar(30),
+gender varchar(20),
+contact_no varchar(20),
+email varchar(50), 
+qualification varchar(65),
+address varchar(155),
+username varchar(50) primary key,
+password varchar(50));
+
+create table activities(event_name varchar(50),
+event_description varchar(500),
+applicable_date varchar(30),
+contact_person varchar(40));
+
+create table certificate(username varchar(50),
+description varchar(500),
+certificate_type varchar(40),
+applied_date varchar(30),
+status varchar(30),
+certificate_file varchar(50));

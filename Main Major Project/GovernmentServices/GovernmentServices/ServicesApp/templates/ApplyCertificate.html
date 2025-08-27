@@ -1,0 +1,74 @@
+{% load static %}
+<html>
+<head>
+<title>Automating E-Government Services with Artificial Intelligence</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="{% static 'style.css' %}" rel="stylesheet" type="text/css" />
+<script language="javascript">
+	function validate(formObj)
+	{
+	if(formObj.t1.value.length==0)
+	{
+	alert("Please Enter Username");
+	formObj.t1.focus();
+	return false;
+	}
+	if(formObj.t2.value.length==0)
+	{
+	alert("Please Enter Password");
+	formObj.t2.focus();
+	return false;
+	}
+	formObj.actionUpdateData.value="update";
+	return true;
+	}
+	</script>
+	
+</head>
+<body>
+<div class="main">
+  <div class="main_resize">
+    <div class="header">
+      <div class="logo">
+        <h1><span>Automating E-Government Services with Artificial Intelligence</span><small></small></h1>
+      </div>
+    </div>
+    <div class="content">
+      <div class="content_bg">
+        <div class="menu_nav">
+          <ul>      
+     <li><a href="{% url 'ApplyCertificate' %}"><font size="3" color="black">Apply Certificate</a></li>
+	 <li><a href="{% url 'ViewStatus' %}"><font size="3" color="black">View Status</a></li>
+	  <li><a href="{% url 'ViewUpcomingActivity' %}"><font size="3" color="black">View Upcoming Activities</a></li>
+	 <li><a href="{% url 'index' %}"><font size="3" color="black">Logout</a></li>
+   </ul>       
+        </div>
+        <div class="hbg"><img src="{% static 'images/header_images.jpg' %}" width="915" height="286" alt="" /></div>
+      				<center>
+<form name="f1" method="post" action={% url 'ApplyCertificateAction' %} onsubmit="return validate(this);">
+{% csrf_token %}<br/>
+   <h2><b>Apply Certificate Screen</b></h2>
+   
+	<font size="" color="red"><center>{{ data }}</center></font>
+						
+						<table align="center" width="30%" >
+			 <tr><td><font size='' color="black"><b>Certificate&nbsp;Type</b></td>
+			 <td><select name="t1">
+			 <option value="Birth Certificate">Birth Certificate</option>
+			 <option value="Death Certificate">Death Certificate</option>
+			 <option value="Income Certificate">Income Certificate</option>
+			  <option value="Community Certificate">Community Certificate</option>
+			 </select>
+			 </td></tr>
+         
+		  <tr><td><font size='' color="black"><b>Description&nbsp;Details</b></td><td><input name="t2" type="text" size="70"></td></tr>
+
+			<tr><td></td><td><input type="submit" value="Submit"></td>
+			</table>
+				</div>	
+					
+				</div>
+				
+					
+	</body>
+</html>
